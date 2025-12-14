@@ -30,65 +30,20 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
     const [isLoading, setIsLoading] = useState(true);
 
     const fetchWorkspaces = useCallback(async () => {
-        console.log('🏢 fetchWorkspaces called, session:', session?.user?.id);
-        if (!session?.user?.id) {
-            console.log('❌ No session user ID, skipping workspace fetch');
-            setIsLoading(false);
-            return;
-        }
-        */
+        console.log('🏢 fetchWorkspaces called - PUBLIC ACCESS MODE');
 
-        /* Original workspace fetching logic - disabled
-        try {
-            console.log('📡 Fetching workspaces from /api/workspaces');
-            const response = await fetch("/api/workspaces");
-            console.log('📡 Workspaces API response status:', response.status);
+        // TEMPORARY: Create mock workspace for public access
+        const mockWorkspace: Workspace = {
+            id: 'public-workspace',
+            name: 'Public Workspace',
+            slug: 'public-workspace',
+            role: 'owner',
+        };
 
-            if (response.ok) {
-                const data = await response.json();
-                console.log('✅ Workspaces data:', data);
-                setWorkspaces(data.workspaces || []);
-
-                if (data.workspaces.length === 0) {
-                    console.log('⚠️ No workspaces available for this user');
-                    return;
-                }
-
-                // Get saved workspace ID from localStorage
-                const savedWorkspaceId = localStorage.getItem("currentWorkspaceId");
-                console.log('💾 Saved workspace ID from localStorage:', savedWorkspaceId);
-
-                // Try to find the saved workspace
-                let workspace = savedWorkspaceId
-                    ? data.workspaces.find((w: Workspace) => w.id === savedWorkspaceId)
-                    : null;
-
-                if (!workspace) {
-                    // Workspace not found - either no saved ID or stale ID
-                    if (savedWorkspaceId) {
-                        console.log('⚠️ Saved workspace ID not found - clearing stale localStorage');
-                        localStorage.removeItem("currentWorkspaceId");
-                    }
-
-                    // Use first available workspace
-                    workspace = data.workspaces[0];
-                    console.log('✅ Using first available workspace:', workspace.name, workspace.id);
-                    setCurrentWorkspace(workspace);
-                    localStorage.setItem("currentWorkspaceId", workspace.id);
-                } else {
-                    // Found saved workspace
-                    console.log('✅ Restored workspace from localStorage:', workspace.name, workspace.id);
-                    setCurrentWorkspace(workspace);
-                }
-            } else {
-                console.error('❌ Workspaces API failed with status:', response.status);
-            }
-        } catch (error) {
-            console.error("❌ Failed to fetch workspaces:", error);
-        } finally {
-            setIsLoading(false);
-        }
-        */
+        setWorkspaces([mockWorkspace]);
+        setCurrentWorkspace(mockWorkspace);
+        setIsLoading(false);
+        console.log('✅ Mock workspace created for public access');
     }, []);
 
     useEffect(() => {
