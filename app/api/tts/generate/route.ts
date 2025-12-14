@@ -75,68 +75,14 @@ export async function POST(request: NextRequest) {
                 { status: 500 }
             );
         }
-
-/* Original code with database - disabled for public access
-// Create TTS job
-const ttsJob = await prisma.ttsJob.create({
-    data: {
-        userId: session.user.id,
-        workspaceId,
-        text,
-        voiceId,
-        voiceName: voiceName || voiceId,
-        modelId: modelId || 'eleven_multilingual_v2',
-        stability: stability ?? 0.5,
-        similarityBoost: similarityBoost ?? 0.75,
-        status: 'processing',
-    },
-});
-
-try {
-    // Generate audio
-    const ttsProvider = getTtsProvider();
-    const audioBuffer = await ttsProvider.generateAudio({
-        text,
-        voiceId,
-        modelId: modelId || 'eleven_multilingual_v2',
-        stability: stability ?? 0.5,
-        similarityBoost: similarityBoost ?? 0.75,
-    });
-
-    // Save audio file
-    const filename = `${ttsJob.id}.mp3`;
-    const audioUrl = await saveAudioFile(audioBuffer, filename);
-
-    // Update job with success
-    const updatedJob = await prisma.ttsJob.update({
-        where: { id: ttsJob.id },
-        data: {
-            status: 'done',
-            audioUrl,
-        },
-    });
-
-    return NextResponse.json(updatedJob);
-} catch (error) {
-    // Update job with error
-    await prisma.ttsJob.update({
-        where: { id: ttsJob.id },
-        data: {
-            status: 'failed',
-            errorMessage: error instanceof Error ? error.message : 'Unknown error',
-        },
-    });
-
-    throw error;
-}
-} catch (error) {
-console.error('Error generating TTS audio:', error);
-return NextResponse.json(
-    {
-        error: 'Failed to generate audio',
-        message: error instanceof Error ? error.message : 'Unknown error',
-    },
-    { status: 500 }
-);
-}
+    } catch (error) {
+        console.error('Error generating TTS audio:', error);
+        return NextResponse.json(
+            {
+                error: 'Failed to generate audio',
+                message: error instanceof Error ? error.message : 'Unknown error',
+            },
+            { status: 500 }
+        );
+    }
 }
