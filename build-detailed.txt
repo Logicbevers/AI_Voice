@@ -1,0 +1,432 @@
+﻿
+> ai-video-saas@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.33
+  - Environments: .env
+
+   Creating an optimized production build ...
+node.exe :  ΓÜá Compiled 
+with warnings
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecifi    ed: 
+( ΓÜá Compiled     with 
+warnings:Str    ing) [], 
+RemoteExc    eption
+    + FullyQualifiedEr    
+rorId : NativeComm    
+andError
+ 
+
+./components/ui/Badge.tsx
+There are multiple 
+modules with names that 
+only differ in casing.
+This can lead to 
+unexpected behavior when 
+compiling on a filesystem 
+with other case-semantic.
+Use equal casing. Compare 
+these module identifiers:
+* javascript/auto|C:\Users
+\dell\.gemini\antigravity\
+scratch\AI_Voice\node_modu
+les\next\dist\build\webpac
+k\loaders\next-flight-clie
+nt-module-loader.js!C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-swc-loade
+r.js??ruleSet[1].rules[16]
+.oneOf[6].use[1]!C:\Users\
+dell\.gemini\antigravity\s
+cratch\AI_Voice\components
+\ui\Badge.tsx|ssr
+    Used by 1 module(s), 
+i. e.
+    javascript/auto|C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-flight-cl
+ient-module-loader.js!C:\U
+sers\dell\.gemini\antigrav
+ity\scratch\AI_Voice\node_
+modules\next\dist\build\we
+bpack\loaders\next-swc-loa
+der.js??ruleSet[1].rules[1
+6].oneOf[6].use[1]!C:\User
+s\dell\.gemini\antigravity
+\scratch\AI_Voice\componen
+ts\ui\index.ts|ssr
+* javascript/auto|C:\Users
+\dell\.gemini\antigravity\
+scratch\AI_Voice\node_modu
+les\next\dist\build\webpac
+k\loaders\next-flight-clie
+nt-module-loader.js!C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-swc-loade
+r.js??ruleSet[1].rules[16]
+.oneOf[6].use[1]!C:\Users\
+dell\.gemini\antigravity\s
+cratch\AI_Voice\components
+\ui\badge.tsx|ssr
+    Used by 1 module(s), 
+i. e.
+    javascript/auto|C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-flight-cl
+ient-module-loader.js!C:\U
+sers\dell\.gemini\antigrav
+ity\scratch\AI_Voice\node_
+modules\next\dist\build\we
+bpack\loaders\next-swc-loa
+der.js??ruleSet[1].rules[1
+6].oneOf[6].use[1]!C:\User
+s\dell\.gemini\antigravity
+\scratch\AI_Voice\componen
+ts\voice-studio\JobHistory
+.tsx|ssr
+
+Import trace for 
+requested module:
+./components/ui/Badge.tsx
+./components/ui/index.ts
+./app/(app)/assets/page.ts
+x
+
+./components/ui/Card.tsx
+There are multiple 
+modules with names that 
+only differ in casing.
+This can lead to 
+unexpected behavior when 
+compiling on a filesystem 
+with other case-semantic.
+Use equal casing. Compare 
+these module identifiers:
+* javascript/auto|C:\Users
+\dell\.gemini\antigravity\
+scratch\AI_Voice\node_modu
+les\next\dist\build\webpac
+k\loaders\next-flight-clie
+nt-module-loader.js!C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-swc-loade
+r.js??ruleSet[1].rules[16]
+.oneOf[6].use[1]!C:\Users\
+dell\.gemini\antigravity\s
+cratch\AI_Voice\components
+\ui\Card.tsx|ssr
+    Used by 1 module(s), 
+i. e.
+    javascript/auto|C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-flight-cl
+ient-module-loader.js!C:\U
+sers\dell\.gemini\antigrav
+ity\scratch\AI_Voice\node_
+modules\next\dist\build\we
+bpack\loaders\next-swc-loa
+der.js??ruleSet[1].rules[1
+6].oneOf[6].use[1]!C:\User
+s\dell\.gemini\antigravity
+\scratch\AI_Voice\componen
+ts\ui\index.ts|ssr
+* javascript/auto|C:\Users
+\dell\.gemini\antigravity\
+scratch\AI_Voice\node_modu
+les\next\dist\build\webpac
+k\loaders\next-flight-clie
+nt-module-loader.js!C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-swc-loade
+r.js??ruleSet[1].rules[16]
+.oneOf[6].use[1]!C:\Users\
+dell\.gemini\antigravity\s
+cratch\AI_Voice\components
+\ui\card.tsx|ssr
+    Used by 2 module(s), 
+i. e.
+    javascript/auto|C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-flight-cl
+ient-module-loader.js!C:\U
+sers\dell\.gemini\antigrav
+ity\scratch\AI_Voice\node_
+modules\next\dist\build\we
+bpack\loaders\next-swc-loa
+der.js??ruleSet[1].rules[1
+6].oneOf[6].use[1]!C:\User
+s\dell\.gemini\antigravity
+\scratch\AI_Voice\componen
+ts\voice-studio\JobHistory
+.tsx|ssr
+
+Import trace for 
+requested module:
+./components/ui/Card.tsx
+./components/ui/index.ts
+./app/(app)/assets/page.ts
+x
+
+ ΓÜá Compiled with 
+warnings
+
+./components/ui/Badge.tsx
+There are multiple 
+modules with names that 
+only differ in casing.
+This can lead to 
+unexpected behavior when 
+compiling on a filesystem 
+with other case-semantic.
+Use equal casing. Compare 
+these module identifiers:
+* javascript/auto|C:\Users
+\dell\.gemini\antigravity\
+scratch\AI_Voice\node_modu
+les\next\dist\build\webpac
+k\loaders\next-flight-clie
+nt-module-loader.js!C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-swc-loade
+r.js??ruleSet[1].rules[16]
+.oneOf[5].use[1]!C:\Users\
+dell\.gemini\antigravity\s
+cratch\AI_Voice\components
+\ui\Badge.tsx|app-pages-br
+owser
+    Used by 1 module(s), 
+i. e.
+    javascript/auto|C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-flight-cl
+ient-module-loader.js!C:\U
+sers\dell\.gemini\antigrav
+ity\scratch\AI_Voice\node_
+modules\next\dist\build\we
+bpack\loaders\next-swc-loa
+der.js??ruleSet[1].rules[1
+6].oneOf[5].use[1]!C:\User
+s\dell\.gemini\antigravity
+\scratch\AI_Voice\componen
+ts\ui\index.ts|app-pages-b
+rowser
+* javascript/auto|C:\Users
+\dell\.gemini\antigravity\
+scratch\AI_Voice\node_modu
+les\next\dist\build\webpac
+k\loaders\next-flight-clie
+nt-module-loader.js!C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-swc-loade
+r.js??ruleSet[1].rules[16]
+.oneOf[5].use[1]!C:\Users\
+dell\.gemini\antigravity\s
+cratch\AI_Voice\components
+\ui\badge.tsx|app-pages-br
+owser
+    Used by 1 module(s), 
+i. e.
+    javascript/auto|C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-flight-cl
+ient-module-loader.js!C:\U
+sers\dell\.gemini\antigrav
+ity\scratch\AI_Voice\node_
+modules\next\dist\build\we
+bpack\loaders\next-swc-loa
+der.js??ruleSet[1].rules[1
+6].oneOf[5].use[1]!C:\User
+s\dell\.gemini\antigravity
+\scratch\AI_Voice\componen
+ts\voice-studio\JobHistory
+.tsx|app-pages-browser
+
+Import trace for 
+requested module:
+./components/ui/Badge.tsx
+./components/ui/index.ts
+./app/(app)/assets/page.ts
+x
+
+./components/ui/Card.tsx
+There are multiple 
+modules with names that 
+only differ in casing.
+This can lead to 
+unexpected behavior when 
+compiling on a filesystem 
+with other case-semantic.
+Use equal casing. Compare 
+these module identifiers:
+* javascript/auto|C:\Users
+\dell\.gemini\antigravity\
+scratch\AI_Voice\node_modu
+les\next\dist\build\webpac
+k\loaders\next-flight-clie
+nt-module-loader.js!C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-swc-loade
+r.js??ruleSet[1].rules[16]
+.oneOf[5].use[1]!C:\Users\
+dell\.gemini\antigravity\s
+cratch\AI_Voice\components
+\ui\Card.tsx|app-pages-bro
+wser
+    Used by 1 module(s), 
+i. e.
+    javascript/auto|C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-flight-cl
+ient-module-loader.js!C:\U
+sers\dell\.gemini\antigrav
+ity\scratch\AI_Voice\node_
+modules\next\dist\build\we
+bpack\loaders\next-swc-loa
+der.js??ruleSet[1].rules[1
+6].oneOf[5].use[1]!C:\User
+s\dell\.gemini\antigravity
+\scratch\AI_Voice\componen
+ts\ui\index.ts|app-pages-b
+rowser
+* javascript/auto|C:\Users
+\dell\.gemini\antigravity\
+scratch\AI_Voice\node_modu
+les\next\dist\build\webpac
+k\loaders\next-flight-clie
+nt-module-loader.js!C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-swc-loade
+r.js??ruleSet[1].rules[16]
+.oneOf[5].use[1]!C:\Users\
+dell\.gemini\antigravity\s
+cratch\AI_Voice\components
+\ui\card.tsx|app-pages-bro
+wser
+    Used by 2 module(s), 
+i. e.
+    javascript/auto|C:\Use
+rs\dell\.gemini\antigravit
+y\scratch\AI_Voice\node_mo
+dules\next\dist\build\webp
+ack\loaders\next-flight-cl
+ient-module-loader.js!C:\U
+sers\dell\.gemini\antigrav
+ity\scratch\AI_Voice\node_
+modules\next\dist\build\we
+bpack\loaders\next-swc-loa
+der.js??ruleSet[1].rules[1
+6].oneOf[5].use[1]!C:\User
+s\dell\.gemini\antigravity
+\scratch\AI_Voice\componen
+ts\voice-studio\AudioPrevi
+ew.tsx|app-pages-browser
+
+Import trace for 
+requested module:
+./components/ui/Card.tsx
+./components/ui/index.ts
+./app/(app)/assets/page.ts
+x
+
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./components/ui/Toast.tsx
+45:8  Warning: React Hook 
+React.useCallback has a 
+missing dependency: 
+'removeToast'. Either 
+include it or remove the 
+dependency array.  react-h
+ooks/exhaustive-deps
+
+./components/video/ScriptI
+nput.tsx
+80:28  Error: `'` can be 
+escaped with `&apos;`, 
+`&lsquo;`, `&#39;`, 
+`&rsquo;`.  react/no-unesc
+aped-entities
+
+./components/video/ShareMo
+dal.tsx
+31:8  Warning: React Hook 
+React.useEffect has a 
+missing dependency: 
+'fetchShareUrl'. Either 
+include it or remove the 
+dependency array.  react-h
+ooks/exhaustive-deps
+
+./components/voice-studio/
+AudioPreview.tsx
+33:26  Warning: The ref 
+value 'audioRef.current' 
+will likely have changed 
+by the time this effect 
+cleanup function runs. If 
+this ref points to a node 
+rendered by React, copy 
+'audioRef.current' to a 
+variable inside the 
+effect, and use that 
+variable in the cleanup 
+function.  react-hooks/exh
+austive-deps
+
+./components/workspace/Mem
+bersList.tsx
+52:8  Warning: React Hook 
+useEffect has a missing 
+dependency: 
+'fetchMembers'. Either 
+include it or remove the 
+dependency array.  react-h
+ooks/exhaustive-deps
+
+info  - Need to disable 
+some ESLint rules? Learn 
+more here: https://nextjs.
+org/docs/basic-features/es
+lint#disabling-rules

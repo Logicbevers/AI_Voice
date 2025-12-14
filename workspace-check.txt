@@ -1,0 +1,12 @@
+﻿≡ƒöì Checking database for workspace associations...
+
+Found 1 users:
+  - demo@example.com (ID: cmj1g46ia0000ugt117plciju)
+
+Found 1 workspaces:
+  - Demo Workspace (ID: cmj1g46j70001ugt1ekhn13qj)
+    Members: 1
+      * demo@example.com (owner)
+
+Found 1 workspace members:
+  - demo@example.com ΓåÆ Demo Workspace (owner)

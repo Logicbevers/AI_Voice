@@ -1,0 +1,13 @@
+﻿≡ƒôè Checking database for projects and video jobs...
+
+Found 1 projects:
+
+1. Welcome Video
+   ID: demo-project-1
+   Status: draft
+   Script: Welcome to our AI Video SaaS platform! Create amaz...
+   Avatar ID: N/A
+   Voice ID: N/A
+   Workspace: Demo Workspace
+   Video Job: None
+
