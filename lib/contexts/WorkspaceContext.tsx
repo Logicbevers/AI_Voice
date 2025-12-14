@@ -36,7 +36,9 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
             setIsLoading(false);
             return;
         }
+        */
 
+        /* Original workspace fetching logic - disabled
         try {
             console.log('📡 Fetching workspaces from /api/workspaces');
             const response = await fetch("/api/workspaces");
@@ -86,12 +88,13 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
         } finally {
             setIsLoading(false);
         }
-    }, [session?.user?.id]);
+        */
+    }, []);
 
     useEffect(() => {
-        console.log('🔄 WorkspaceContext useEffect triggered, session?.user?.id:', session?.user?.id);
+        console.log('🔄 WorkspaceContext useEffect triggered - PUBLIC ACCESS MODE');
         fetchWorkspaces();
-    }, [fetchWorkspaces, session?.user?.id]);
+    }, [fetchWorkspaces]);
 
     const switchWorkspace = (workspaceId: string) => {
         console.log('🔀 switchWorkspace called with ID:', workspaceId);
