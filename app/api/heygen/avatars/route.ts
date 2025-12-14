@@ -6,11 +6,10 @@ import { getHeyGenClient } from '@/lib/heygen';
 // GET /api/heygen/avatars - Fetch available HeyGen avatars
 export async function GET() {
     try {
-        const session = await getServerSession(authOptions);
-
-        if (!session?.user?.id) {
-            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-        }
+        // const session = await getServerSession(authOptions); // DISABLED FOR PUBLIC ACCESS
+        // if (!session?.user?.id) {
+        //     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        // }
 
         // Check if HeyGen API key is configured
         if (!process.env.HEYGEN_API_KEY) {
