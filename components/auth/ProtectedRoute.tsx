@@ -1,5 +1,10 @@
 "use client";
 
+// AUTHENTICATION TEMPORARILY DISABLED
+// This component will be re-enabled once deployment is stable
+
+// Original code commented out:
+/*
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -33,5 +38,16 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
         return null;
     }
 
+    return <>{children}</>;
+}
+*/
+
+// Temporary: Render children without authentication check
+interface ProtectedRouteProps {
+    children: React.ReactNode;
+}
+
+export function ProtectedRoute({ children }: ProtectedRouteProps) {
+    // Bypass authentication - render children directly
     return <>{children}</>;
 }

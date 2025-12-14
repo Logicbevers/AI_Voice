@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { Bell, Search, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useSession, signOut } from "next-auth/react";
+// import { useSession, signOut } from "next-auth/react"; // DISABLED FOR PUBLIC ACCESS
 import { WorkspaceSelector } from "@/components/workspace/WorkspaceSelector";
 
 interface TopBarProps {
@@ -13,7 +13,8 @@ interface TopBarProps {
 
 export function TopBar({ isSidebarCollapsed = false }: TopBarProps) {
     const { theme, setTheme } = useTheme();
-    const { data: session } = useSession();
+    // const { data: session } = useSession(); // DISABLED FOR PUBLIC ACCESS
+    const session: { user?: { name?: string; email?: string } } | null = null; // Temporary: No authentication
     const [mounted, setMounted] = React.useState(false);
     const [showUserMenu, setShowUserMenu] = React.useState(false);
 
@@ -104,6 +105,7 @@ export function TopBar({ isSidebarCollapsed = false }: TopBarProps) {
                                     Settings
                                 </Link>
                                 <div className="border-t border-neutral-200 dark:border-neutral-800 my-2" />
+                                {/* Sign out disabled for public access
                                 <button
                                     onClick={async () => {
                                         await signOut({ redirect: false });
@@ -113,6 +115,7 @@ export function TopBar({ isSidebarCollapsed = false }: TopBarProps) {
                                 >
                                     Sign Out
                                 </button>
+                                */}
                             </div>
                         )}
                     </div>

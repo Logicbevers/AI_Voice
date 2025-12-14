@@ -1,3 +1,8 @@
+// AUTHENTICATION TEMPORARILY DISABLED FOR DEPLOYMENT
+// This middleware will be re-enabled once deployment is stable
+
+// Original middleware code commented out:
+/*
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
@@ -49,3 +54,11 @@ export const config = {
         "/signup",
     ],
 };
+*/
+
+// Temporary: Allow all routes without authentication
+import { NextResponse } from "next/server";
+
+export function middleware() {
+    return NextResponse.next();
+}

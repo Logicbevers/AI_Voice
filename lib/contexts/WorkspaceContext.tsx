@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
-import { useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react"; // DISABLED FOR PUBLIC ACCESS
 
 interface Workspace {
     id: string;
@@ -23,7 +23,8 @@ interface WorkspaceContextType {
 const WorkspaceContext = createContext<WorkspaceContextType | undefined>(undefined);
 
 export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
-    const { data: session } = useSession();
+    // const { data: session } = useSession(); // DISABLED FOR PUBLIC ACCESS
+    const session = null; // Temporary: No authentication
     const [currentWorkspace, setCurrentWorkspace] = useState<Workspace | null>(null);
     const [workspaces, setWorkspaces] = useState<Workspace[]>([]);
     const [isLoading, setIsLoading] = useState(true);
