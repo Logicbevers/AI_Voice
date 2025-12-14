@@ -9,15 +9,14 @@ export async function GET() {
     console.log('[API Route] Starting voice fetch request');
 
     try {
-        // Check authentication
-        console.log('[API Route] Checking authentication...');
-        const session = await getServerSession(authOptions);
-
-        if (!session?.user?.id) {
-            console.log('[API Route] ERROR: User not authenticated');
-            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-        }
-        console.log('[API Route] User authenticated:', session.user.id);
+        // Check authentication - DISABLED FOR PUBLIC ACCESS
+        // console.log('[API Route] Checking authentication...');
+        // const session = await getServerSession(authOptions);
+        // if (!session?.user?.id) {
+        //     console.log('[API Route] ERROR: User not authenticated');
+        //     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        // }
+        // console.log('[API Route] User authenticated:', session.user.id);
 
         // Check if ElevenLabs API key is configured
         console.log('[API Route] Checking ELEVENLABS_API_KEY environment variable...');

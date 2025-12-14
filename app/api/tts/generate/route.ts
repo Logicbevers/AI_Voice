@@ -8,11 +8,11 @@ import { saveAudioFile } from '@/lib/tts/storage';
 // POST /api/tts/generate - Generate audio from text
 export async function POST(request: NextRequest) {
     try {
-        const session = await getServerSession(authOptions);
-
-        if (!session?.user?.id) {
-            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-        }
+        // const session = await getServerSession(authOptions); // DISABLED FOR PUBLIC ACCESS
+        // if (!session?.user?.id) {
+        //     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        // }
+        const session = { user: { id: 'public-user' } }; // Temporary mock session
 
         const body = await request.json();
         const { text, voiceId, voiceName, modelId, stability, similarityBoost, workspaceId } = body;
