@@ -3,7 +3,6 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { getTtsProvider } from '@/lib/tts';
-import { saveAudioFile } from '@/lib/tts/storage';
 
 // POST /api/tts/generate - Generate audio from text
 export async function POST(request: NextRequest) {
@@ -39,8 +38,8 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // TEMPORARY: Skip database operations in public access mode
-        // Just generate audio directly without saving job to database
+        // TEMPORARY: Skip database operations and file storage in public access mode
+        // Return audio as base64 data URL (works on Vercel serverless)
         try {
             // Generate audio
             const ttsProvider = getTtsProvider();
@@ -52,11 +51,12 @@ export async function POST(request: NextRequest) {
                 similarityBoost: similarityBoost ?? 0.75,
             });
 
-            // Save audio file
-            const filename = `tts-${Date.now()}.mp3`;
-            const audioUrl = await saveAudioFile(audioBuffer, filename);
+            // Convert audio buffer to base64 data URL
+            // This works on Vercel serverless (no file system write needed)
+            const base64Audio = audioBuffer.toString('base64');
+            const audioUrl = `data:audio/mpeg;base64,${base64Audio}`;
 
-            // Return success without database job
+            // Return success with data URL
             return NextResponse.json({
                 id: `temp-${Date.now()}`,
                 status: 'done',
